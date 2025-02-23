@@ -1,0 +1,150 @@
+<!DOCTYPE HTML>
+<html lang="en">
+<head>
+	<title>Vis & Society Assignment 3</title>
+	<link rel="stylesheet" href="https://vis-society.github.io/assignments/report.css" />
+</head>
+
+<body>
+	<header>
+		<h1>
+			<small>Assignment 3</small>
+			Visualization Critique & Redesign
+		</h1>
+
+		<p>
+			<strong>Rupa Kurinchi-Vendhan</strong> — <em>rupak272@mit.edu</em>
+		</p>
+	</header>
+
+	<main>
+		<section>
+			<h2>Reading & Critique</h2>
+
+			<figure>
+				<img src="https://vis-society.github.io/assets/imgs/covid-spiral.png" alt="" />
+			</figure>
+
+			<p>
+				Insights about the data/visualization:
+			</p>
+
+			<ul>
+				<li><b>Seasonal Trends:</b> The visualization shows cycles of COVID-19 cases spiraling outward in quarterly (three months) intervals, suggesting that each year saw increasing peaks in case numbers.</li>
+				<li><b>Comparison Across Variants:</b> The Omicron surge (early 2022) is by far the most dramatic, dwarfing previous surges, which suggests that even though Delta (mid-to-late 2021) was severe, Omicron led to an unprecedented spike in cases.</li>
+				<li><b>Comparing Yearly Peaks:</b> The case numbers appear to be highest around the same seasonal periods each year, particularly in winter months (January), highlighting a pattern of increased transmission during colder seasons.</li>
+				<li><b>Impact of Public Health Interventions:</b> The structure of the curves might reflect how interventions (e.g., vaccines, mask mandates, or social distancing) affected case numbers at different points in time. The 2021 loop is larger than 2020, but the largest jump is seen in 2022, possibly due to Omicron's high transmissibility despite vaccination efforts.</li>
+			</ul>
+			
+			<p>
+				Design Critique:
+			</p>
+			<p>
+				This spiral visualization effectively conveys the cyclical nature of COVID-19 case surges, making it immediately apparent how each successive wave has grown in magnitude. The choice of a spiral format is expressive in that it allows for direct year-over-year comparisons while preserving the seasonality of case peaks. The use of red shading and a bold outer boundary helps highlight the peaks and variability in case numbers, while the subtle radial grid provides a time reference without overwhelming the viewer. The labels for years and key time markers (e.g., January, July, October) help orient the audience, making the visualization readable despite its unconventional layout. The inclusion of a 7-day moving average smooths out fluctuations, making trends clearer. This plot is included at the very top of the NYT opinion piece, which serves as an effective initial investigation and invitation to readers to learn more about historical trends in COVID cases, setting the stage well for the coming predictive analysis.
+			</p>
+			<p>
+				However, the spiral format, while visually striking, introduces challenges for precise data interpretation. The outward expansion and the resulting distortion of distance from the center can make it difficult to directly compare non-peak values or assess exact case counts at a given point in time. Unlike a linear time series, the curvature of the data may obscure smaller trends, and estimating values without a clearer scale could be challenging for some viewers. The key on the top left of the visualization shows roughly how the width of the curves relate to the number of cases, but may be helpful to more quantitatively and explicitly compare case counts without having to refer to a separate key. Additionally, while the spiral suggests increasing severity, it may not effectively convey how interventions or changes in reporting practices influenced case numbers over time. Overall, the visualization succeeds in making a powerful visual statement about the escalating nature of the pandemic but may sacrifice some precision and accessibility for a general audience.
+			</p>
+
+			<!-- <ul>
+				<li>CRITIQUE 1</li>
+				<li>CRITIQUE 2</li>
+				<li>CRITIQUE 3</li>
+			</ul> -->
+		</section>
+
+		<section>
+			<h2>Visualization Sketches</h2>
+
+      <figure>
+				<img src="figs/viz1.jpeg" width=1000 alt="" />
+				<figcaption>
+					This interactive spiral visualization captures the seasonality and magnitude of COVID-19 case surges, with hover-enabled quantitative details and key event markers providing insight into major interventions, variant emergences, and policy changes over time.
+				</figcaption>
+			</figure>
+
+			<p>
+				Design Rationale for Sketch 1:
+			</p>
+
+			<ul>
+				<li><b>Motivation:</b> To reduce visual clutter and allow for quantitative, direct year-by-year comparisons while maintaining the expressive and cyclical nature of the original spiral visualization. This format ensures that seasonal patterns and surges are clearly highlighted while also integrating precise numerical data through interactive elements.</li>
+				<li><b>What it Communicates:</b> The spiral plot conveys relative magnitude of COVID-19 case surges each year, making it clear which waves were the most severe, as well as seasonal patterns over multiple years, reinforcing the trend of winter peaks and summer declines. The interactive components show key events on intervention and variants, providing critical context for why surges occurred at specific times. Additionally, the quantitative detail on hover allows users to see exact case counts per month while maintaining the overall shape of the visualization.</li>
+				<li><b>What Works Well:</b> Interactivity enhances clarity by providing precise numbers without overwhelming the static visualization. Users can hover over different parts of the spiral to see case counts for that specific time and year, removing the key to avoid redundant information and declutter. Markers for key events (e.g., vaccine rollouts, major variants, policy changes) help contextualize the trends, reducing misinterpretation. This version also maintains the benefits of the radial format by showing seasonality clearly while addressing the distortion issue from the original spiral with more quantitative information.</li>
+				<li><b>Challenges:</b> This version requires more space, particularly to ensure that event markers and hover elements do not clutter the visualization. With the markers and quantitative information, it could be overwhelming for a reader, especially when left as the first visualization in the NYT opinion piece. In terms of implementation, it will also be important to ensure that hover tooltips and event markers do not overlap or interfere with readability.</li>
+				<li><b>Next Sketch:</b> Perhaps a simpler line chart may help with reducing the amount of clutter on the page, while still allowing for a quantitative comparison across years and seasons.</li>
+			</ul>
+
+			<figure>
+				<img src="figs/viz2.jpeg" width=1000 alt="" />
+				<figcaption>
+					By overlaying multiple years in a standard line chart, this visualization makes it easier to compare COVID-19 waves, identify seasonal trends, and assess the impact of public health interventions, without the distortion introduced by the spiral format.
+				</figcaption>
+			</figure>
+
+			<p>
+				Design Rationale for Sketch 2:
+			</p>
+
+			<ul>
+				<li><b>Motivation:</b> A standard time-series plot is one of the most effective ways to visualize trends over time. This format is widely recognized and easy to interpret, making it a strong choice for presenting precise, quantitative comparisons of COVID-19 case counts. Unlike the spiral chart, which emphasizes cyclical patterns, a continuous time-series removes distortions and allows for a direct, unbroken view of the pandemic's progression from its onset through various waves and interventions.</li>
+				<li><b>What it Communicates:</b> This visualization highlights the cyclical nature of COVID-19 case surges, while also making the relative intensity of different waves across years more apparent. By presenting time on a continuous axis, it reveals long-term trends in a way that facilitates analysis of how the pandemic evolved. Additionally, it helps contextualize the effects of interventions, such as vaccine rollouts, mask mandates, and policy changes, by placing them in a single, uninterrupted timeline, with interactive hover effects highlighting events and case counts per month.</li>
+				<li><b>What Works Well:</b> One of the strongest advantages of this format is the clear separation of years while maintaining a smooth progression of case trends over time. This makes it easier to read exact values, track case spikes, and compare the intensity of waves across months and years without the need to mentally reconstruct timelines. The ability to precisely annotate key interventions and variant emergences further strengthens its analytical value, helping viewers connect policy actions with observed changes in case counts.</li>
+				<li><b>Challenges:</b> To enhance readability and year-over-year comparisons, one possible improvement would be to incorporate seasonal markers or background shading to highlight specific time periods (e.g., winters or major intervention periods). Another option is to include subtle overlays for prior years’ data, allowing for direct comparisons without breaking the continuity of the time series. This could also make the visualization too complex and difficult to interpret.</li>
+				<li><b>Next Sketch:</b> A possible improvement would be to use a continuous time-series chart. This would allow for an uninterrupted view of the entire pandemic, rather than forcing yearly comparisons that may not align perfectly with significant trends. A continuous timeline would still show seasonality but could provide more insight into long-term patterns and intervention effects.</li>
+			</ul>
+
+			<figure>
+				<img src="figs/viz3.jpeg" width=1000 alt="" />
+				<figcaption>
+					This continuous time-series visualization presents the full progression of the pandemic, allowing for precise comparisons of case surges across months and years while highlighting the effects of interventions, vaccines, and policy shifts in a clear, uninterrupted format.
+				</figcaption>
+			</figure>
+
+			<p>
+				Design Rationale for Sketch 3:
+			</p>
+
+			<ul>
+				<li><b>Motivation:</b> To reduce visual clutter and allow for quantitative, direct year-by-year comparisons while maintaining the expressive and cyclical nature of the original spiral visualization. This format ensures that seasonal patterns and surges are clearly highlighted while also integrating precise numerical data through interactive elements.</li>
+				<li><b>What it Communicates:</b> The spiral plot conveys relative magnitude of COVID-19 case surges each year, making it clear which waves were the most severe, as well as seasonal patterns over multiple years, reinforcing the trend of winter peaks and summer declines. The interactive components show key events on intervention and variants, providing critical context for why surges occurred at specific times. Additionally, the quantitative detail on hover allows users to see exact case counts per month while maintaining the overall shape of the visualization.</li>
+				<li><b>What Works Well:</b> Interactivity enhances clarity by providing precise numbers without overwhelming the static visualization. Users can hover over different parts of the spiral to see case counts for that specific time and year, removing the key to avoid redundant information and declutter. Markers for key events (e.g., vaccine rollouts, major variants, policy changes) help contextualize the trends, reducing misinterpretation. This version also maintains the benefits of the radial format by showing seasonality clearly while addressing the distortion issue from the original spiral with more quantitative information.</li>
+				<li><b>Challenges:</b> This version requires more space, particularly to ensure that event markers and hover elements do not clutter the visualization. With the markers and quantitative information, it could be overwhelming for a reader, especially when left as the first visualization in the NYT opinion piece. In terms of implementation, it will also be important to ensure that hover tooltips and event markers do not overlap or interfere with readability.</li>
+				<li><b>Next Sketch:</b> This visualization could benefit from animations that show a progression over time, to better highlight trends and engage the viewer.</li>
+			</ul>
+		</section>
+
+		<section>
+			<h2>Final Visualization Design</h2>
+			
+      
+			<figure>
+				<div class="flourish-embed flourish-chart" data-src="visualisation/21775683"><script src="https://public.flourish.studio/resources/embed.js"></script><noscript><img src="https://public.flourish.studio/visualisation/21775683/thumbnail" width="100%" alt="chart visualization" /></noscript></div>
+				<figcaption>
+					This animated line chart visually tracks the evolving trajectory of daily COVID-19 cases, recoveries, and deaths from March 2020 to December 2022, offering an interactive exploration of pandemic trends with precise numerical insights.
+				</figcaption>
+			</figure>
+
+		</section>
+
+		<section>
+			<h2>Design Process & Design Decisions</h2>
+			<p>
+				This visualization was designed to effectively communicate the evolving magnitude and trajectory of COVID-19 cases, recoveries, and deaths over time while maintaining an intuitive and engaging user experience. The goal was to emphasize temporal trends in the pandemic and provide a clear view of major waves and their impact. By animating the data, the visualization creates a sense of progression, reinforcing how different pandemic phases unfolded. Unlike static plots, this approach highlights the dynamic nature of the data, making it easier to track surges, declines, and turning points. The interactive elements allow users to pause, replay, and examine specific points, ensuring that crucial details are not lost in the animation. The timeline is limited to March 2020–December 2022, focusing on the most critical period of the pandemic response and avoiding unnecessary clutter from early or post-pandemic fluctuations. The visualization uses distinctly colored lines for new confirmed cases, recoveries, and deaths, making it easier to differentiate between trends. Line thickness and opacity adjustments prevent overlap and ensure that all three variables remain legible. A logarithmic scale was considered but ultimately not used, as absolute values are more intuitive for a general audience. The use of interactive tooltips allows users to retrieve precise numerical values at specific points, addressing a common issue with aggregated visualizations that obscure finer details. However, this approach downplays seasonality, as it presents data in a continuous timeline rather than highlighting patterns within individual years. Additionally, while the animation enhances storytelling, it requires user engagement to fully explore trends, which may be a limitation for passive viewers who prefer a static summary.
+			</p>
+			<!-- <p>
+				This visualization was designed to improve clarity, precision, and engagement in tracking the trajectory of COVID-19 cases, recoveries, and deaths over time. The animated line chart allows users to observe the evolution of pandemic waves dynamically, while interactive elements provide precise numerical values at different points. Unlike the original spiral visualization, which distorted distances and made comparisons difficult, this design presents data on a linear time scale, making it easier to track trends, identify peaks, and compare different phases of the pandemic. The use of distinct colored lines ensures that cases, recoveries, and deaths remain visually separable, while interactivity enhances exploration, allowing users to focus on key moments from March 2020 to December 2022.
+			</p>
+			<p>
+				This redesign directly addresses critiques of the spiral chart by removing ambiguity, improving numerical readability, and eliminating reliance on an external scale key. However, it also introduces new trade-offs. The animation format requires active user engagement to fully explore trends, which may be a barrier for passive viewers. Additionally, while the continuous time-series chart provides a clear narrative of the pandemic's progression, it does not explicitly highlight seasonality as well as the spiral or heatmap alternatives. The lack of side-by-side year comparisons means users must manually navigate to compare distant peaks. Despite these trade-offs, this final design strikes a balance between expressiveness and analytical precision, making pandemic trends both accessible and interpretable for a broad audience.
+      		</p> -->
+
+      <h3>Reflection</h3>
+
+      <p>
+        This final design directly addresses several critiques of the original spiral visualization, particularly regarding clarity, precision, and accessibility. While the spiral chart was visually compelling, it introduced distortions that made it difficult to extract exact numerical values and compare trends over time. In contrast, this animated line chart presents the entire timeline on a linear scale, ensuring that trends are easy to follow and compare across different months and years. The inclusion of interactive elements further mitigates the issue of lost granularity by enabling users to retrieve precise values on demand. Additionally, unlike the spiral format, this visualization does not require a separate legend for interpreting scale, making it more accessible to a broad audience. However, the redesign also introduces new trade-offs. While a linear time series is effective for tracking long-term trends, it does not emphasize seasonality as clearly as a radial or heatmap visualization. The animation, while engaging, can also make comparing non-adjacent time periods more difficult, as users must either rely on memory or interact with the visualization to juxtapose different peaks. Despite these challenges, the final design prioritizes clarity, precision, and user engagement, making it a strong alternative to the original visualization while recognizing the inherent difficulties of communicating complex, evolving datasets in a single visual format.
+      </p>
+		</section>
+	</main>
+</body>
+</html>
